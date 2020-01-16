@@ -4,7 +4,7 @@ import pandas as pd
 import base64
 import time
 
-api_token = 'aRFZ5MqjZvVRrDemVmYSAN3PwgLmjVZW3kwOygxU'
+api_token = '<API-Token>'
 auth_url = 'https://evn.leanix.net/services/mtm/v1/oauth2/token'
 #request_url = 'https://svc.leanix.net/services/mtm/v1'
 mtm_base_url = 'https://svc.leanix.net/services/mtm/v1'
