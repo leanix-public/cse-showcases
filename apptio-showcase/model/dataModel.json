@@ -1,0 +1,1837 @@
+{
+	"factSheets": {
+		"BusinessCapability": {
+			"config": {
+				"qualitySeal": {
+					"enabled": false,
+					"value": null,
+					"unit": null
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"opEx": {
+					"type": "DOUBLE"
+				},
+				"capEx": {
+					"type": "DOUBLE"
+				},
+				"totalCostOfOwnership": {
+					"type": "DOUBLE"
+				},
+				"appRun": {
+					"type": "DOUBLE"
+				},
+				"appDev": {
+					"type": "DOUBLE"
+				},
+				"appSave": {
+					"type": "DOUBLE"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "BC",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"Process": {
+			"config": {
+				"qualitySeal": {
+					"enabled": false,
+					"value": null,
+					"unit": null
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "PRO",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"UserGroup": {
+			"config": {
+				"qualitySeal": {
+					"enabled": true,
+					"value": 365,
+					"unit": "DAYS"
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				},
+				"location": {
+					"inFacet": true,
+					"type": "LOCATION"
+				},
+				"opEx": {
+					"type": "DOUBLE"
+				},
+				"capEx": {
+					"type": "DOUBLE"
+				},
+				"totalCostOfOwnership": {
+					"type": "DOUBLE"
+				},
+				"appRun": {
+					"type": "DOUBLE"
+				},
+				"appDev": {
+					"type": "DOUBLE"
+				},
+				"appSave": {
+					"type": "DOUBLE"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "USG",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"Project": {
+			"config": {
+				"qualitySeal": {
+					"enabled": true,
+					"value": 90,
+					"unit": "DAYS"
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"netPresentValue": {
+					"type": "DOUBLE"
+				},
+				"paybackPeriod": {
+					"type": "DOUBLE"
+				},
+				"capEx": {
+					"type": "DOUBLE"
+				},
+				"opEx": {
+					"type": "DOUBLE"
+				},
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"benefitDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"projectRisk": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"lowProjectRisk",
+						"moderateProjectRisk",
+						"highProjectRisk",
+						"severeProjectRisk"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"costDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"projectStatus": {
+					"inView": true,
+					"values": [
+						"red",
+						"yellow",
+						"green"
+					],
+					"type": "PROJECT_STATUS"
+				},
+				"businessValueDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"budgetCapEx": {
+					"type": "DOUBLE"
+				},
+				"budgetOpEx": {
+					"type": "DOUBLE"
+				},
+				"businessValue": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"marginalBusinessBenefit",
+						"littleBusinessBenefit",
+						"largeBusinessBenefit",
+						"significantBusinessBenefit"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				},
+				"projectRiskDescription": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "PRJ",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"Application": {
+			"config": {
+				"qualitySeal": {
+					"enabled": true,
+					"value": 90,
+					"unit": "DAYS"
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"opEx": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"capEx": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"totalCostOfOwnership": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"appRun": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"appDev": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"appSave": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"appCloud": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"functionalSuitabilityDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"technicalSuitabilityDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"functionalSuitability": {
+					"inFacet": true,
+					"inView": true,
+					"viewAggregation": "MIN",
+					"values": [
+						"unreasonable",
+						"insufficient",
+						"appropriate",
+						"perfect"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"technicalSuitability": {
+					"inFacet": true,
+					"inView": true,
+					"viewAggregation": "MIN",
+					"values": [
+						"inappropriate",
+						"unreasonable",
+						"adequate",
+						"fullyAppropriate"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"businessCriticality": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"administrativeService",
+						"businessOperational",
+						"businessCritical",
+						"missionCritical"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"release": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"businessCriticalityDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						},
+						{
+							"field": "release",
+							"separator": " ",
+							"operation": "APPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "APP",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"Interface": {
+			"config": {
+				"qualitySeal": {
+					"enabled": false,
+					"value": null,
+					"unit": null
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"interfaceType": {
+					"inFacet": true,
+					"values": [
+						"synchronous",
+						"asynchronous",
+						"batch"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"release": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				},
+				"dataFlowDirection": {
+					"inFacet": true,
+					"values": [
+						"incoming",
+						"outgoing",
+						"biDirectional"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"frequency": {
+					"inFacet": true,
+					"values": [
+						"hourly",
+						"daily",
+						"weekly",
+						"monthly",
+						"yearly",
+						"realtime",
+						"onDemand"
+					],
+					"type": "SINGLE_SELECT"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						},
+						{
+							"field": "release",
+							"separator": " ",
+							"operation": "APPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"fixed": "IF"
+						},
+						{
+							"relation": "relInterfaceToProviderApplication",
+							"separator": " ",
+							"operation": "APPEND"
+						},
+						{
+							"field": "interfaceIdSequence",
+							"separator": " ",
+							"prefix": "(",
+							"postfix": ")",
+							"operation": "APPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"DataObject": {
+			"config": {
+				"qualitySeal": {
+					"enabled": false,
+					"value": null,
+					"unit": null
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"dataClassification": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"public",
+						"sensitive",
+						"restricted",
+						"confidential"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				},
+				"dataClassificationDescription": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "DAO",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"ITComponent": {
+			"config": {
+				"qualitySeal": {
+					"enabled": true,
+					"value": 365,
+					"unit": "DAYS"
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"opEx": {
+					"type": "DOUBLE"
+				},
+				"capEx": {
+					"type": "DOUBLE"
+				},
+				"totalCostOfOwnership": {
+					"type": "DOUBLE"
+				},
+				"appRun": {
+					"type": "DOUBLE"
+				},
+				"appDev": {
+					"type": "DOUBLE"
+				},
+				"appSave": {
+					"type": "DOUBLE"
+				},
+				"technicalSuitabilityDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"technicalSuitability": {
+					"inView": true,
+					"viewAggregation": "MIN",
+					"values": [
+						"inappropriate",
+						"unreasonable",
+						"adequate",
+						"fullyAppropriate"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"release": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				},
+				"location": {
+					"inFacet": true,
+					"type": "LOCATION"
+				},
+				"category": {
+					"inFacet": true,
+					"values": [
+						"software",
+						"hardware",
+						"service"
+					],
+					"type": "SINGLE_SELECT"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						},
+						{
+							"field": "release",
+							"separator": " ",
+							"operation": "APPEND"
+						},
+						{
+							"relation": "relITComponentToProvider",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "ITC",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"Provider": {
+			"config": {
+				"qualitySeal": {
+					"enabled": true,
+					"value": 365,
+					"unit": "DAYS"
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"opEx": {
+					"type": "DOUBLE"
+				},
+				"capEx": {
+					"type": "DOUBLE"
+				},
+				"totalCostOfOwnership": {
+					"type": "DOUBLE"
+				},
+				"providerCriticalityDescription": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				},
+				"providerCriticality": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"commodity",
+						"operational",
+						"tactical",
+						"strategic"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"providerQuality": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"unreasonable",
+						"insufficient",
+						"appropriate",
+						"perfect"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"providerQualityDescription": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "PRV",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		},
+		"TechnicalStack": {
+			"config": {
+				"qualitySeal": {
+					"enabled": false,
+					"value": null,
+					"unit": null
+				},
+				"maxHierarchyLevel": 3,
+				"defaultACL": "GLOBAL"
+			},
+			"fields": {
+				"lifecycle": {
+					"inFacet": true,
+					"inView": true,
+					"values": [
+						"plan",
+						"phaseIn",
+						"active",
+						"phaseOut",
+						"endOfLife"
+					],
+					"type": "LIFECYCLE"
+				},
+				"alias": {
+					"quickSearch": true,
+					"fullTextSearch": true,
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"namingRule": {
+				"regular": {
+					"fullName": [
+						{
+							"field": "name"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				},
+				"autogenerate": {
+					"fullName": [
+						{
+							"field": "id"
+						},
+						{
+							"fixed": "TS",
+							"separator": " ",
+							"operation": "PREPEND"
+						}
+					],
+					"displayName": [
+						{
+							"field": "fullName"
+						},
+						{
+							"relation": "relToParent",
+							"separator": " / ",
+							"operation": "PREPEND"
+						}
+					]
+				}
+			}
+		}
+	},
+	"relations": {
+		"childParentRelation": {
+			"from": {
+				"factSheetType": "*",
+				"multiplicity": "1",
+				"name": "relToParent"
+			},
+			"to": {
+				"factSheetType": "*",
+				"multiplicity": "*",
+				"name": "relToChild"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": [
+				"TYPE_EQUAL"
+			]
+		},
+		"requiresRelation": {
+			"from": {
+				"factSheetType": "*",
+				"multiplicity": "*",
+				"name": "relToRequires"
+			},
+			"to": {
+				"factSheetType": "*",
+				"multiplicity": "*",
+				"name": "relToRequiredBy"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"successorRelation": {
+			"from": {
+				"factSheetType": "*",
+				"multiplicity": "*",
+				"name": "relToSuccessor"
+			},
+			"to": {
+				"factSheetType": "*",
+				"multiplicity": "*",
+				"name": "relToPredecessor"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": [
+				"TYPE_EQUAL"
+			]
+		},
+		"applicationUserGroupRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relApplicationToUserGroup"
+			},
+			"to": {
+				"factSheetType": "UserGroup",
+				"multiplicity": "*",
+				"name": "relUserGroupToApplication"
+			},
+			"fields": {
+				"functionalSuitability": {
+					"values": [
+						"unreasonable",
+						"insufficient",
+						"appropriate",
+						"perfect"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"numberOfUsers": {
+					"type": "INTEGER"
+				},
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"usageType": {
+					"values": [
+						"user",
+						"owner"
+					],
+					"type": "SINGLE_SELECT"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"applicationDataObjectRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relApplicationToDataObject"
+			},
+			"to": {
+				"factSheetType": "DataObject",
+				"multiplicity": "*",
+				"name": "relDataObjectToApplication"
+			},
+			"fields": {
+				"usage": {
+					"values": [
+						"create",
+						"read",
+						"update",
+						"delete"
+					],
+					"type": "MULTIPLE_SELECT"
+				},
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"applicationITComponentRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relApplicationToITComponent",
+				"groupByTargetField": "category"
+			},
+			"to": {
+				"factSheetType": "ITComponent",
+				"multiplicity": "*",
+				"name": "relITComponentToApplication"
+			},
+			"fields": {
+				"costTotalAnnual": {
+					"inView": true,
+					"type": "DOUBLE"
+				},
+				"technicalSuitability": {
+					"values": [
+						"inappropriate",
+						"unreasonable",
+						"adequate",
+						"fullyAppropriate"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"serviceLevel": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"applicationProjectRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relApplicationToProject"
+			},
+			"to": {
+				"factSheetType": "Project",
+				"multiplicity": "*",
+				"name": "relProjectToApplication"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"applicationInterfaceProviderRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relProviderApplicationToInterface"
+			},
+			"to": {
+				"factSheetType": "Interface",
+				"multiplicity": "1",
+				"name": "relInterfaceToProviderApplication"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"applicationInterfaceConsumerRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relConsumerApplicationToInterface"
+			},
+			"to": {
+				"factSheetType": "Interface",
+				"multiplicity": "*",
+				"name": "relInterfaceToConsumerApplication"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"applicationProcessRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relApplicationToProcess"
+			},
+			"to": {
+				"factSheetType": "Process",
+				"multiplicity": "*",
+				"name": "relProcessToApplication"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": [
+				"applicationBusinessCapabilityRelation",
+				"applicationUserGroupRelation"
+			],
+			"constraints": []
+		},
+		"applicationBusinessCapabilityRelation": {
+			"from": {
+				"factSheetType": "Application",
+				"multiplicity": "*",
+				"name": "relApplicationToBusinessCapability"
+			},
+			"to": {
+				"factSheetType": "BusinessCapability",
+				"multiplicity": "*",
+				"name": "relBusinessCapabilityToApplication"
+			},
+			"fields": {
+				"supportType": {
+					"values": [
+						"supports",
+						"leading"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"functionalSuitability": {
+					"values": [
+						"unreasonable",
+						"insufficient",
+						"appropriate",
+						"perfect"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": [
+				"applicationUserGroupRelation"
+			],
+			"constraints": []
+		},
+		"itComponentTechnologyStackRelation": {
+			"from": {
+				"factSheetType": "ITComponent",
+				"multiplicity": "*",
+				"name": "relITComponentToTechnologyStack"
+			},
+			"to": {
+				"factSheetType": "TechnicalStack",
+				"multiplicity": "*",
+				"name": "relTechnologyStackToITComponent"
+			},
+			"fields": {
+				"supportType": {
+					"values": [
+						"supports",
+						"leading"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"resourceClassification": {
+					"inView": true,
+					"values": [
+						"investigating",
+						"approved",
+						"conditional",
+						"retiring",
+						"unapproved"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": [
+				"itComponentProviderRelation"
+			],
+			"constraints": []
+		},
+		"itComponentUserGroupRelation": {
+			"from": {
+				"factSheetType": "ITComponent",
+				"multiplicity": "*",
+				"name": "relITComponentToUserGroup"
+			},
+			"to": {
+				"factSheetType": "UserGroup",
+				"multiplicity": "*",
+				"name": "relUserGroupToITComponent"
+			},
+			"fields": {
+				"technicalSuitability": {
+					"values": [
+						"inappropriate",
+						"unreasonable",
+						"adequate",
+						"fullyAppropriate"
+					],
+					"type": "SINGLE_SELECT"
+				},
+				"numberOfUsers": {
+					"type": "INTEGER"
+				},
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"usageType": {
+					"values": [
+						"user",
+						"owner"
+					],
+					"type": "SINGLE_SELECT"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"itComponentProviderRelation": {
+			"from": {
+				"factSheetType": "ITComponent",
+				"multiplicity": "1",
+				"name": "relITComponentToProvider"
+			},
+			"to": {
+				"factSheetType": "Provider",
+				"multiplicity": "*",
+				"name": "relProviderToITComponent",
+				"groupByTargetField": "category"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"interfaceDataObjectRelation": {
+			"from": {
+				"factSheetType": "Interface",
+				"multiplicity": "*",
+				"name": "relInterfaceToDataObject"
+			},
+			"to": {
+				"factSheetType": "DataObject",
+				"multiplicity": "*",
+				"name": "relDataObjectToInterface"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"interfaceITComponentRelation": {
+			"from": {
+				"factSheetType": "Interface",
+				"multiplicity": "*",
+				"name": "relInterfaceToITComponent"
+			},
+			"to": {
+				"factSheetType": "ITComponent",
+				"multiplicity": "*",
+				"name": "relITComponentToInterface"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"processBusinessCapabilityRelation": {
+			"from": {
+				"factSheetType": "Process",
+				"multiplicity": "*",
+				"name": "relProcessToBusinessCapability"
+			},
+			"to": {
+				"factSheetType": "BusinessCapability",
+				"multiplicity": "*",
+				"name": "relBusinessCapabilityToProcess"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"projectUserGroupRelation": {
+			"from": {
+				"factSheetType": "Project",
+				"multiplicity": "*",
+				"name": "relProjectToUserGroup"
+			},
+			"to": {
+				"factSheetType": "UserGroup",
+				"multiplicity": "*",
+				"name": "relUserGroupToProject"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"projectBusinessCapabilityRelation": {
+			"from": {
+				"factSheetType": "Project",
+				"multiplicity": "*",
+				"name": "relProjectToBusinessCapability"
+			},
+			"to": {
+				"factSheetType": "BusinessCapability",
+				"multiplicity": "*",
+				"name": "relBusinessCapabilityToProject"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": [
+				"projectProviderRelation",
+				"projectUserGroupRelation"
+			],
+			"constraints": []
+		},
+		"projectITComponentRelation": {
+			"from": {
+				"factSheetType": "Project",
+				"multiplicity": "*",
+				"name": "relProjectToITComponent"
+			},
+			"to": {
+				"factSheetType": "ITComponent",
+				"multiplicity": "*",
+				"name": "relITComponentToProject"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"projectProcessRelation": {
+			"from": {
+				"factSheetType": "Project",
+				"multiplicity": "*",
+				"name": "relProjectToProcess"
+			},
+			"to": {
+				"factSheetType": "Process",
+				"multiplicity": "*",
+				"name": "relProcessToProject"
+			},
+			"fields": {
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		},
+		"projectProviderRelation": {
+			"from": {
+				"factSheetType": "Project",
+				"multiplicity": "*",
+				"name": "relProjectToProvider"
+			},
+			"to": {
+				"factSheetType": "Provider",
+				"multiplicity": "*",
+				"name": "relProviderToProject"
+			},
+			"fields": {
+				"orderNo": {
+					"validators": null,
+					"type": "STRING"
+				},
+				"orderedCapex": {
+					"type": "INTEGER"
+				},
+				"orderedOpex": {
+					"type": "INTEGER"
+				},
+				"description": {
+					"validators": null,
+					"type": "STRING"
+				}
+			},
+			"constrainingRelations": null,
+			"constraints": []
+		}
+	},
+	"validators": {},
+	"externalIdFields": {
+		"externalId": {
+			"quickSearch": true,
+			"fullTextSearch": true,
+			"urlTemplate": null,
+			"uniqueFactSheet": false,
+			"autoIncrement": false,
+			"readOnly": false,
+			"forFactSheets": [
+				"Project",
+				"DataObject",
+				"ITComponent",
+				"Process",
+				"TechnicalStack",
+				"Application",
+				"Interface",
+				"BusinessCapability",
+				"UserGroup",
+				"Provider"
+			]
+		},
+		"signavioProcessId": {
+			"quickSearch": true,
+			"fullTextSearch": true,
+			"urlTemplate": "https://editor.signavio.com/p/editor?id={{externalId}}",
+			"uniqueFactSheet": true,
+			"autoIncrement": false,
+			"readOnly": true,
+			"forFactSheets": [
+				"Process"
+			]
+		},
+		"signavioGlossaryItemId": {
+			"quickSearch": true,
+			"fullTextSearch": true,
+			"urlTemplate": "https://editor.signavio.com/p/glossary#gitem={{externalId}}",
+			"uniqueFactSheet": true,
+			"autoIncrement": false,
+			"readOnly": true,
+			"forFactSheets": [
+				"Application",
+				"UserGroup",
+				"BusinessCapability"
+			]
+		},
+		"technopediaId": {
+			"quickSearch": false,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": false,
+			"autoIncrement": false,
+			"readOnly": true,
+			"forFactSheets": [
+				"ITComponent",
+				"TechnicalStack",
+				"Provider"
+			]
+		},
+		"interfaceIdSequence": {
+			"quickSearch": false,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"Interface"
+			]
+		},
+		"leanixV3IdBusinessCapability": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"BusinessCapability"
+			]
+		},
+		"leanixV3IdProcess": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"Process"
+			]
+		},
+		"leanixV3IdUserGroup": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"UserGroup"
+			]
+		},
+		"leanixV3IdProject": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"Project"
+			]
+		},
+		"leanixV3IdApplication": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"Application"
+			]
+		},
+		"leanixV3IdInterface": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"Interface"
+			]
+		},
+		"leanixV3IdDataObject": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"DataObject"
+			]
+		},
+		"leanixV3IdITComponent": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"ITComponent"
+			]
+		},
+		"leanixV3IdProvider": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"Provider"
+			]
+		},
+		"leanixV3IdTechnicalStack": {
+			"quickSearch": true,
+			"fullTextSearch": false,
+			"urlTemplate": null,
+			"uniqueFactSheet": true,
+			"autoIncrement": true,
+			"readOnly": true,
+			"forFactSheets": [
+				"TechnicalStack"
+			]
+		}
+	},
+	"rules": {
+		"defaultNamingRule": {
+			"regular": {
+				"fullName": [
+					{
+						"field": "name"
+					}
+				],
+				"displayName": [
+					{
+						"field": "fullName"
+					}
+				]
+			}
+		}
+	}
+}

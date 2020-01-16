@@ -1,0 +1,793 @@
+{
+	"type": "Application",
+	"bgColor": "#348fbc",
+	"color": "#fff",
+	"onTheFlyCreation": true,
+	"fieldMetaData": {
+		"lifecycle": {
+			"values": {
+				"plan": {
+					"bgColor": "#d8d8d8",
+					"icon": "plus-circle"
+				},
+				"phaseIn": {
+					"bgColor": "#aaa",
+					"icon": "plus-circle"
+				},
+				"active": {
+					"bgColor": "#496a8f",
+					"icon": "check-circle"
+				},
+				"phaseOut": {
+					"bgColor": "#ffd02c",
+					"icon": "minus-circle"
+				},
+				"endOfLife": {
+					"bgColor": "#c00000",
+					"icon": "minus-circle"
+				}
+			}
+		},
+		"totalCostOfOwnership": {
+			"values": {
+				"min": {
+					"bgColor": "#1665ee"
+				},
+				"max": {
+					"bgColor": "#e7effd"
+				}
+			}
+		},
+		"appSave": {
+			"values": {
+				"min": {
+					"bgColor": "#1665ee"
+				}
+			}
+		},
+		"businessCriticality": {
+			"icon": {
+				"type": "arrow-up",
+				"color": "#aa0000",
+				"reverse": false
+			},
+			"values": {
+				"administrativeService": {
+					"bgColor": "#4B8B07"
+				},
+				"businessOperational": {
+					"bgColor": "#92D050"
+				},
+				"businessCritical": {
+					"bgColor": "#FFF600"
+				},
+				"missionCritical": {
+					"bgColor": "#C00000"
+				}
+			}
+		},
+		"functionalSuitability": {
+			"icon": {
+				"type": "star",
+				"color": "#f3b307",
+				"reverse": false
+			},
+			"values": {
+				"perfect": {
+					"bgColor": "#4B8B07"
+				},
+				"appropriate": {
+					"bgColor": "#92D050"
+				},
+				"insufficient": {
+					"bgColor": "#FFF600"
+				},
+				"unreasonable": {
+					"bgColor": "#C00000"
+				}
+			}
+		},
+		"technicalSuitability": {
+			"icon": {
+				"type": "star",
+				"color": "#f3b307",
+				"reverse": false
+			},
+			"values": {
+				"fullyAppropriate": {
+					"bgColor": "#4B8B07"
+				},
+				"adequate": {
+					"bgColor": "#92D050"
+				},
+				"unreasonable": {
+					"bgColor": "#FFF600"
+				},
+				"inappropriate": {
+					"bgColor": "#C00000"
+				}
+			}
+		},
+		"relApplicationToITComponent": {
+			"costTotalAnnual": {
+				"min": {
+					"bgColor": "#BFE0F5"
+				},
+				"max": {
+					"bgColor": "#00416A"
+				}
+			}
+		},
+		"relApplicationToBusinessCapability": {
+			"functionalSuitability": {
+				"icon": {
+					"type": "star",
+					"color": "#f3b307",
+					"reverse": false
+				}
+			}
+		},
+		"relApplicationToUserGroup": {
+			"functionalSuitability": {
+				"icon": {
+					"type": "star",
+					"color": "#f3b307",
+					"reverse": false
+				}
+			}
+		}
+	},
+	"sections": [
+		{
+			"label": "section.information",
+			"subsections": [
+				{
+					"label": "subsection.nameDescription.label",
+					"template": "fields",
+					"templateOptions": {
+						"layout": {
+							"fields": [
+								{
+									"name": "name",
+									"type": "text",
+									"size": 10,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "release",
+									"type": "text",
+									"size": 2,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "alias",
+									"type": "text",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "externalId",
+									"type": "externalId",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "leanixV3IdApplication",
+									"type": "externalId",
+									"size": 12,
+									"readonly": false,
+									"weight": 1
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.acl.label",
+					"helpText": "subsection.acl.helpText",
+					"template": "fields",
+					"templateOptions": {
+						"layout": {
+							"fields": [
+								{
+									"name": "permittedReadACL",
+									"type": "acl",
+									"size": 6,
+									"readonly": false,
+									"weight": 0
+								},
+								{
+									"name": "permittedWriteACL",
+									"type": "acl",
+									"size": 6,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 0
+				},
+				{
+					"label": "subsection.lifecycle.label",
+					"helpText": "subsection.lifecycle.helpText",
+					"template": "fields",
+					"templateOptions": {
+						"layout": {
+							"fields": [
+								{
+									"name": "lifecycle",
+									"type": "lifecycle",
+									"readonly": false,
+									"weight": 1
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": null,
+					"template": "relationDiagram",
+					"templateOptions": null,
+					"weight": 0
+				},
+				{
+					"label": "subsection.successors.label",
+					"helpText": "subsection.successors.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relToSuccessor",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.predecessors.label",
+					"helpText": "subsection.predecessors.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relToPredecessor",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				}
+			],
+			"tabs": [
+				"default"
+			],
+			"weight": 1
+		},
+		{
+			"label": "section.apptioCosts",
+			"subsections": [
+				{
+					"label": "subsection.overviewCosts.label",
+					"helpText": "subsection.overviewCosts.helpText",
+					"template": "fields",
+					"templateOptions": {
+						"layout": {
+							"fields": [
+								{
+									"name": "opEx",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "capEx",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "totalCostOfOwnership",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.appCosts.label",
+					"helpText": "subsection.appCosts.helpText",
+					"template": "fields",
+					"templateOptions": {
+						"layout": {
+							"fields": [
+								{
+									"name": "appRun",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "appDev",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "appSave",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "appCloud",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								}
+							]
+						}
+					},
+					"weight": 1
+				}
+			],
+			"tabs": [
+				"default"
+			],
+			"weight": 1
+		},
+		{
+			"label": "section.dependencies",
+			"subsections": [
+				{
+					"label": "subsection.parents.label",
+					"helpText": "subsection.parents.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relToParent",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.children.label",
+					"helpText": "subsection.children.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relToChild",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.requires.label",
+					"helpText": "subsection.requires.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relToRequires",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1,
+					"disabled": true
+				},
+				{
+					"label": "subsection.requiredBy.label",
+					"helpText": "subsection.requiredBy.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relToRequiredBy",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1,
+					"disabled": true
+				}
+			],
+			"tabs": [
+				"default"
+			],
+			"weight": 1
+		},
+		{
+			"label": "section.projects",
+			"subsections": [
+				{
+					"label": "subsection.factSheetsAffecting.label",
+					"helpText": "subsection.factSheetsAffecting.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relApplicationToProject",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				}
+			],
+			"tabs": [
+				"default"
+			],
+			"weight": 1
+		},
+		{
+			"label": "section.businessSupport",
+			"subsections": [
+				{
+					"label": "subsection.businessCriticalityFunctionalSuitability.label",
+					"helpText": "subsection.businessCriticalityFunctionalSuitability.helpText",
+					"template": "fields",
+					"templateOptions": {
+						"layout": {
+							"fields": [
+								{
+									"name": "businessCriticality",
+									"type": "status",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "functionalSuitability",
+									"type": "status",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "businessCriticalityDescription",
+									"type": "textarea",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "functionalSuitabilityDescription",
+									"type": "textarea",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.factSheetsSupported.label",
+					"helpText": "subsection.factSheetsSupported.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relApplicationToBusinessCapability",
+						"layout": {
+							"fields": [
+								{
+									"name": "supportType",
+									"type": "status",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "functionalSuitability",
+									"type": "status",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.factSheetsSupported.label_",
+					"helpText": "subsection.factSheetsSupported.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relApplicationToProcess",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.userGroups.label",
+					"helpText": "subsection.userGroups.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relApplicationToUserGroup",
+						"layout": {
+							"fields": [
+								{
+									"name": "usageType",
+									"type": "status",
+									"size": 4,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "numberOfUsers",
+									"type": "number",
+									"size": 4,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "functionalSuitability",
+									"type": "status",
+									"size": 4,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				}
+			],
+			"tabs": [
+				"default"
+			],
+			"weight": 1
+		},
+		{
+			"label": "section.dataManagement",
+			"subsections": [
+				{
+					"label": "subsection.factSheetsCreatedModifiedRequiredBy.label",
+					"helpText": "subsection.factSheetsCreatedModifiedRequiredBy.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relApplicationToDataObject",
+						"layout": {
+							"fields": [
+								{
+									"name": "usage",
+									"type": "multipleSelect",
+									"size": 12,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.factSheetsProvided.label",
+					"helpText": "subsection.factSheetsProvided.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relProviderApplicationToInterface",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.factSheetsConsumed.label",
+					"helpText": "subsection.factSheetsConsumed.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relConsumerApplicationToInterface",
+						"layout": {
+							"fields": [
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 12,
+									"readonly": false,
+									"weight": 0
+								}
+							]
+						}
+					},
+					"weight": 1
+				}
+			],
+			"tabs": [
+				"default"
+			],
+			"weight": 1
+		},
+		{
+			"label": "section.sourcing",
+			"subsections": [
+				{
+					"label": "subsection.technicalSuitability.label",
+					"helpText": "subsection.technicalSuitability.helpText",
+					"template": "fields",
+					"templateOptions": {
+						"layout": {
+							"fields": [
+								{
+									"name": "technicalSuitability",
+									"type": "status",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "technicalSuitabilityDescription",
+									"type": "textarea",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								}
+							]
+						}
+					},
+					"weight": 1
+				},
+				{
+					"label": "subsection.itComponentsUsing.label",
+					"helpText": "subsection.itComponentsUsing.helpText",
+					"template": "relation",
+					"templateOptions": {
+						"relationName": "relApplicationToITComponent",
+						"layout": {
+							"fields": [
+								{
+									"name": "technicalSuitability",
+									"type": "status",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "description",
+									"type": "textarea",
+									"size": 6,
+									"readonly": false,
+									"weight": 0
+								},
+								{
+									"name": "serviceLevel",
+									"type": "text",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								},
+								{
+									"name": "costTotalAnnual",
+									"type": "costs",
+									"size": 6,
+									"readonly": false,
+									"weight": 1
+								}
+							]
+						}
+					},
+					"weight": 1
+				}
+			],
+			"tabs": [
+				"default"
+			],
+			"weight": 1
+		}
+	],
+	"hoverConfig": null
+}
