@@ -4,7 +4,7 @@ import pandas as pd
 from scripts import getFactsheets as fs
 import random
 
-api_token = 'aRFZ5MqjZvVRrDemVmYSAN3PwgLmjVZW3kwOygxU'
+api_token = '<API-Token>'
 ws_id = 'ea7d3162-b4c5-4dbf-b9fb-6ba8f050ce08'
 auth_url = 'https://app.leanix.net/services/mtm/v1/oauth2/token' 
 request_url = 'https://app.leanix.net/services/metrics/v1/points'
